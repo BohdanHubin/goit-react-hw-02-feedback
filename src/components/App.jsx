@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import style from './App.module.css';
+
 import Section from './Section/Section';
 import FeedbackOptions from './FeedbackOptions/FeedbackOptions';
 import Statistics from './Statistics/Statistics';
@@ -31,7 +33,7 @@ state = {
   render() {
     const { good, neutral, bad } = this.state;
     return (
-    <div>
+    <div className={style.container}>
         <Section title="Please leave feedback">
           <FeedbackOptions
             options={Object.keys(this.state)}
